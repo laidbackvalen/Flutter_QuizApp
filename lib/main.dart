@@ -18,46 +18,44 @@ class AdvanceBasics extends StatelessWidget {
           decoration: const BoxDecoration(
             gradient: LinearGradient(
               colors: [Colors.purple, Colors.deepPurple],
-              begin: Alignment.topLeft, end: Alignment.bottomRight,
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
             ),
           ),
           child: Center(
               child: Column(
+            mainAxisSize: MainAxisSize.min,
             children: [
-              Container(
-                margin: const EdgeInsets.only(top: 150, bottom: 50),
-                child: Image.asset(
-                  'assets/images/quizlogo.png',
-                  width: 300,
-                ),
-              ),
-              const Text(
-                'Learn Flutter the fun Way!',
-                style: TextStyle(fontSize: 20, color: Colors.white),
+              Image.asset(
+                'assets/images/quizlogo.png',
+                width: 300,
+                color: const Color.fromARGB(150, 255, 255, 255),
               ),
               const SizedBox(
-                height: 20,
+                height: 50,
               ),
-              OutlinedButton(
-                style: const ButtonStyle(),
-                onPressed: () {},
-                child: SizedBox(
-                  width: 110,
-                  child: Row(
-                    children: [
-                      SvgPicture.asset(
-                        'assets/images/rightsideicon.svg',
-                        width: 20,
-                      ),
-                      const SizedBox(
-                        width: 20,
-                      ),
-                      const Text(
-                        'Start Quiz',
-                        style: TextStyle(color: Colors.white),
-                      ),
-                    ],
+              const Text(
+                'Learn Flutter the fun way!',
+                style: TextStyle(fontSize: 24, color: Colors.white),
+              ),
+              const SizedBox(
+                height: 40,
+              ),
+              OutlinedButton.icon(
+                style: OutlinedButton.styleFrom(
+                  foregroundColor: Colors.white,
+                  backgroundColor: Colors.orange,
+                  shape: const ContinuousRectangleBorder(
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(20.0),
+                    ),
                   ),
+                ),
+                onPressed: () {},
+                icon: const Icon(Icons.arrow_right_alt),
+                label: const Text(
+                  'Start Quiz',
+                  style: TextStyle(fontWeight: FontWeight.bold),
                 ),
               ),
             ],
@@ -67,3 +65,52 @@ class AdvanceBasics extends StatelessWidget {
     );
   }
 }
+
+
+
+
+//  Opacity(
+              //   opacity: 0.5,
+              //   child: Image.asset(
+              //     'assets/images/quizlogo.png',
+              //     width: 300,
+              //   ),
+              // ),
+
+
+
+
+
+
+
+
+//  OutlinedButton(
+//                 style: OutlinedButton.styleFrom(
+//                   foregroundColor: Colors.white,
+//                   backgroundColor: Colors.orange,
+//                   shape: const ContinuousRectangleBorder(
+//                     borderRadius: BorderRadius.all(
+//                       Radius.circular(20.0),
+//                     ),
+//                   ),
+//                 ),
+//                 onPressed: () {},
+//                 child: SizedBox(
+//                   width: 110,
+//                   child: Row(
+//                     children: [
+//                       SvgPicture.asset(
+//                         'assets/images/rightsideicon.svg',
+//                         width: 20,
+//                       ),
+//                       const SizedBox(
+//                         width: 20,
+//                       ),
+//                       const Text(
+//                         'Start Quiz',
+//                         style: TextStyle(fontWeight: FontWeight.bold),
+//                       ),
+//                     ],
+//                   ),
+//                 ),
+//               ),
